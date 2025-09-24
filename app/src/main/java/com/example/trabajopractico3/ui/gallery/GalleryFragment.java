@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 
@@ -29,13 +30,20 @@ public class GalleryFragment extends Fragment {
         binding = FragmentGalleryBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        ListaAdapter la = new ListaAdapter((ArrayList<Producto>) stock,getLayoutInflater(),getContext());
-        GridLayoutManager glm = new GridLayoutManager(getContext(),1,GridLayoutManager.VERTICAL,false);
-        binding.rvLista.setLayoutManager(glm);
-        binding.rvLista.setAdapter(la);
+        mv.getMLista().observe(getViewLifecycleOwner(), new Observer<ArrayList<Producto>>() {
+            @Override
+            public void onChanged(ArrayList<Producto> productos) {
+                ListaAdapter la = new ListaAdapter((ArrayList<Producto>) productos,getLayoutInflater(),getContext());
+                GridLayoutManager glm = new GridLayoutManager(getContext(),1,GridLayoutManager.VERTICAL,false);
+                binding.rvLista.setLayoutManager(glm);
+                binding.rvLista.setAdapter(la);
+            }
+        });
 
 
 
+
+        mv.cargarLista();
         return root;
     }
 
