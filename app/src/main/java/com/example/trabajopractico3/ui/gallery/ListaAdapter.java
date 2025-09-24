@@ -14,6 +14,8 @@ import com.example.trabajopractico3.model.Producto;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class ListaAdapter extends RecyclerView.Adapter<ListaAdapter.ViewHolderStock> {
     private ArrayList<Producto> lista;
@@ -22,6 +24,12 @@ public class ListaAdapter extends RecyclerView.Adapter<ListaAdapter.ViewHolderSt
     private DecimalFormat formatoPrecio = new DecimalFormat("#,##0.00");
 
     public ListaAdapter(ArrayList<Producto> lista, LayoutInflater li, Context context) {
+        lista.sort(new Comparator<Producto>() {
+            @Override
+            public int compare(Producto p1, Producto p2) {
+                return p1.getDescripcion().compareToIgnoreCase(p2.getDescripcion());
+            }
+        });
         this.lista = lista;
         this.li = li;
         this.context = context;
