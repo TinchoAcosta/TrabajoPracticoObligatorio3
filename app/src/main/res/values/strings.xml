@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Trabajo Practico 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="sistema_de_stock">Sistema de Stock</string>
+    <string name="negocio_pepito">Negocio Pepito</string>
+    <string name="cargar">Cargar</string>
+    <string name="listar">Listar</string>
+    <string name="salir">Salir</string>
+    <string name="no_hay_productos_disponibles">No hay productos disponibles.</string>
+    <string name="ingrese_el_c_digo_del_producto">Ingrese el código del producto.</string>
+    <string name="ingrese_la_descripci_n_del_producto">Ingrese la descripción del producto.</string>
+    <string name="ingrese_el_precio_del_producto">Ingrese el precio del producto.</string>
+    <string name="agregar">Agregar</string>
+    <string name="android_triste">android triste</string>
+</resources>
