@@ -27,4 +27,18 @@
         android:name="com.example.trabajopractico3.mapa.MapsFragment"
         android:label="Última Ubicación"
         tools:layout="@layout/fragment_maps" />
+    <fragment
+        android:id="@+id/busquedaFragment"
+        android:name="com.example.trabajopractico3.ui.busqueda.BusquedaFragment"
+        android:label="Buscar un Producto"
+        tools:layout="@layout/fragment_busqueda" >
+        <action
+            android:id="@+id/action_busquedaFragment_to_resultadoBusquedaFragment"
+            app:destination="@id/resultadoBusquedaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultadoBusquedaFragment"
+        android:name="com.example.trabajopractico3.ui.busqueda.ResultadoBusquedaFragment"
+        android:label="Detalle del Producto"
+        tools:layout="@layout/fragment_resultado_busqueda" />
 </navigation>

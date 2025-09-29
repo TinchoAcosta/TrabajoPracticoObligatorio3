@@ -17,6 +17,10 @@
             android:icon="@drawable/map"
             android:title="@string/mapa" />
         <item
+            android:id="@+id/busquedaFragment"
+            android:icon="@drawable/buscar"
+            android:title="@string/b_squeda" />
+        <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/salir"
             android:title="@string/salir" />

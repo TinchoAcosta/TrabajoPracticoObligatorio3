@@ -1,6 +1,8 @@
 package com.example.trabajopractico3.model;
 
-public class Producto {
+import java.io.Serializable;
+
+public class Producto implements Serializable {
     private String descripcion, codigo;
     private double precio;
 
